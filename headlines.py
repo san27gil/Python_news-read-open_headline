@@ -97,8 +97,10 @@ for article in top15:
     print(index, ':', news)
 
 print('\n')
+
+# Ask for a link to open in browser
 while True:
-    x = int(input('¿Qué noticia quieres leer?: '))
+    x = int(input('Which one do you want to open?'))
     y = x - 1
     if x <=60:
         webbrowser.open(links[y])
