@@ -3,21 +3,20 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-# Simulamos navegar desde Mozilla.
 headers = {'user-agent': 'Mozilla/5.0'}
 
-# Fecha de actualización de las noticias:
+# Last updated news
 time_now = datetime.now().strftime("%d-%m-%Y")
 print('\n')
 
-# Saludo:
+# Greeting
 hour = datetime.now().hour
 if hour < 12 and hour > 3:
-    print(' Buenos días. Hoy es '+ time_now + ' y esto es lo más destacado de la mañana:')
+    print(' Good morning. Today is '+ time_now + ' and these are the most important news so far:')
 elif hour >= 12 and hour < 20:
-    print(' Buenas tardes. Hoy es '+ time_now + ' y esto es lo más destacado de la tarde:')
+    print(' Good afternoon. Today is  '+ time_now + ' and these are the most important news so far:')
 else:
-    print(' Buenas noches. Hoy es '+ time_now + ' y esto es lo más destacado de la noche:')
+    print(' Good night. Today is '+ time_now + ' and these are the most important news so far:')
 print('\n')
 
 links =[]
